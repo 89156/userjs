@@ -1,12 +1,3 @@
-// ==UserScript==
-// @name         天才们的邀约 正确答案高亮助手
-// @namespace    https://starrailawards.com/
-// @version      2
-// @description  适用于⌈天才们的邀约⌋小游戏，加载时立即高亮已有题目
-// @match        *://geniuses.starrailawards.com/*
-// @grant        none
-// @icon         https://static.appoint.icu/QA/img/geniuses.ico
-// ==/UserScript==
 
 (function(){
 'use strict';
@@ -32,7 +23,6 @@ const buildOptKey=o=>{
 const highlight=()=>{
     const q=document.querySelector('.question-text');
     if(!q) return;
-    addHint(q);
     let key=q.innerText.trim();
     if(key.includes('请找出与题目语音同角色的选项')) return;
     const box=q.closest('.question-container');
