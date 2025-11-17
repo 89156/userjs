@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 let DB={};
-fetch("https://gh-proxy.org/https://github.com/89156/userjs/raw/refs/heads/main/user.js")
+fetch("https://github.com/89156/userjs/raw/refs/heads/main/quiz_db.json")
 .then(r=>r.json()).then(j=>{
     DB=j;
     const tryHighlight=()=>{ 
