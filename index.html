@@ -25,11 +25,20 @@
 <body>
   <div class="wrap">
     <h1>⌈天才们的邀约⌋ 辅助答题工具</h1>
-    <p class="lead">脚本功能：<span class="outline-sample">用绿色描边标出答案方便选择</span></p>
 
     <div class="card">
       <strong>如何使用脚本</strong>
-      <div class="hint">方法一：使用 篡改猴(Tampermonkey) 插件。 方法二：打开网站后在控制台粘贴指令（无需插件）。</div>
+      <div class="hint">方法一:代理原网站并注入脚本 方法二：使用篡改猴(Tampermonkey) 插件。 方法二：打开网站后在控制台粘贴指令（无需插件）。</div>
+    </div>
+
+        <div class="card">
+      <strong class="big">方法二：</strong>
+      <pre class="codebox mono" id="link1">a-1dv.pages.dev</pre>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:6px;">
+        <button class="copybtn" data-copy="a-1dv.pages.dev">复制链接</button>
+        <span class="success" style="display:none">已复制</span>
+      </div>
+      <div class="hint">直接进入即可</div>
     </div>
 
     <div class="card">
@@ -41,9 +50,9 @@
       </div>
       <div class="hint">使用方法：复制上方链接 → 打开 Tampermonkey 管理面板 → 实用工具 → 从 URL 安装</div>
     </div>
-
+    
     <div class="card">
-      <strong class="big">方法二：控制台指令</strong>
+      <strong class="big">方法三：控制台指令</strong>
       <pre class="codebox mono" id="cmd">fetch("https://gh-proxy.org/https://raw.githubusercontent.com/89156/userjs/refs/heads/main/quiz_highlight.js").then(r=>r.text()).then(eval)</pre>
       <div style="display:flex;gap:10px;align-items:center;margin-top:6px;">
         <button class="copybtn" id="copy-run">复制指令</button>
@@ -52,13 +61,6 @@
       <div class="hint" style="margin-top:10px;">使用方法：进入小游戏页面 → 按 F12 或右键空白点击检查打开开发者工具 → 切换到 Console（控制台） → 粘贴以上指令并回车执行。</div>
     </div>
 
-    <div class="card">
-      <strong>快速说明</strong>
-      <ul style="margin:8px 0 0 18px;color:#666">
-        <li>脚本效果：在小游戏页面将正确答案用绿色描边标记，便于点击选择。</li>
-        <li>使用 Tampermonkey 时请确保脚本来源可信并检查源码。</li>
-      </ul>
-    </div>
 
   <script>
     function showMsg(btn){
