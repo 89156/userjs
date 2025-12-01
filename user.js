@@ -10,7 +10,7 @@
 (function(){
 'use strict';
 let DB={};
-fetch("https://gh-proxy.org/https://github.com/89156/GSTA/raw/refs/heads/main/quiz_db.json")
+fetch("https://gh-proxy.org/https://raw.githubusercontent.com/aa1x/GSTA/refs/heads/main/quiz_db.json")
 .then(r=>r.json())
 .then(j=>{DB=j});
 
